@@ -35,3 +35,27 @@ const styles = StyleSheet.create({
     header: { fontSize: 24, textAlign: 'center', marginVertical: 10 },
     sectionTitle: { fontSize: 18, marginTop: 20 },
 });
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import HomeScreen from './screens/HomeScreen';
+import ScheduleScreen from './screens/ScheduleScreen';
+import DonateScreen from './screens/DonateScreen';
+
+const Stack = createStackNavigator();
+
+export default function App() {
+    return (
+        <NavigationContainer>
+            <Stack.Navigator>
+                <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Schedule" component={ScheduleScreen} />
+                <Stack.Screen name="Donate" component={DonateScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
+}
+>>>>>>> 56f7a26 (Condensed files into a single repository)
