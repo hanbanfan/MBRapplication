@@ -2,7 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const adminRoutes = require('./routes/admin'); // Admin routes
+const adminRoutes = require('./routes/admin');
+
+
 
 const app = express();
 app.use(cors());
