@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
-// Schema for schedules
-const scheduleSchema = new mongoose.Schema({
-    title: String,
-    time: String,
+const ScheduleSchema = new mongoose.Schema({
+    day: { type: String, required: true },
+    shows: [{
+        title: { type: String, required: true },
+        time: { type: String, required: true }
+    }]
 });
 
-module.exports = mongoose.model('Schedule', scheduleSchema);
+module.exports = mongoose.model('Schedule', ScheduleSchema);

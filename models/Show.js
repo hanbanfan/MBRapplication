@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-// Schema for shows
-const showSchema = new mongoose.Schema({
-    title: String,
-    link: String,
+const ShowSchema = new mongoose.Schema({
+    title: { type: String, required: true },
+    link: { type: String, required: true },
+    date: { type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Show', showSchema);
+module.exports = mongoose.model('Show', ShowSchema);
